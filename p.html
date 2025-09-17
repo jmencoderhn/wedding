@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Image + Noise Overlay</title>
+<style>
+  :root{
+    --bg-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=1600&auto=format&fit=crop'); /* replace */
+    --fg-color: #FFD166;
+    --noise-url: url('noise0.png'); /* small repeating PNG */
+    --overlay-blend: overlay; /* try multiply, screen, soft-light, normal */
+    --overlay-opacity: 0.35;
+  }
+
+  html,body{height:100%;margin:0;font-family:system-ui,Segoe UI,Roboto,Arial; background-color:#51512f}
+  .hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--fg-color);
+    /* background-color: red; */
+    /* background-image: var(--bg-image); */
+    background-size:cover;
+    background-position:center;
+    opacity: 0.2;
+  }
+
+  /* noise overlay as pseudo-element */
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background-image: var(--noise-url);
+    background-repeat: repeat;
+    opacity: var(--overlay-opacity);
+    mix-blend-mode: var(--overlay-blend);
+    backdrop-filter: none;
+}
+
+.panel{
+    position:relative; /* above overlay */
+    z-index:1;
+    text-align:center;
+    padding:3rem 2rem;
+    background: rgba(0,0,0,0.25);
+    border-radius:12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    max-width:720px;
+    width:90%;
+}
+
+h1{
+    margin:0 0 .5rem;
+    font-size:clamp(28px,4vw,48px);
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+}
+
+  p{margin:.25rem 0 1.25rem;font-size:1.05rem;opacity:.95}
+
+  .btn{
+    display:inline-block;
+    padding:.6rem 1.1rem;
+    border-radius:999px;
+    background: linear-gradient(90deg, rgba(255,209,102,1) 0%, rgba(255,150,75,1) 100%);
+    color:#111;
+    font-weight:600;
+    text-decoration:none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  }
+
+  /* small demo controls (optional) */
+  .controls{position:absolute;left:12px;top:12px;z-index:2}
+  .controls small{display:block;color:#fff;font-size:.8rem;margin-bottom:.3rem;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+</style>
+</head>
+<body>
+  <div class="hero">
+  </div>
+</body>
+</html>
