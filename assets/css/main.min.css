@@ -38,7 +38,8 @@
     /*--c-bg: hsl(1, 17%, 95%);*/
     --c-bg: rgba(96, 98, 71);
     /* --c-text: hsl(0, 15%, 55%); */
-    --c-text: rgba(158, 123, 70);
+    /* --c-text: rgba(158, 123, 70); */
+    --c-text: rgba(242, 243, 235);
     --font-family: "Campton", sans-serif;
     --font-serif: "Didot LT", Didot, serif;
     --font-size: 17px;
@@ -294,10 +295,12 @@ body {
 
 .outline-btn {
     background: transparent;
-    color: rgba(158, 123, 70);
+    /* color: rgba(158, 123, 70); */
+    color: rgba(242, 243, 235);
     padding: 12px 28px;
     font-size: 24px;
-    border: 2px solid rgba(158, 123, 70);
+    /* border: 2px solid rgba(158, 123, 70); */
+    border: 2px solid rgba(242, 243, 235);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -307,8 +310,9 @@ body {
 
 /* Hover effect */
 .outline-btn:hover {
+    color: rgba(158, 123, 70);
     background-color: rgba(158, 123, 70, 0.1); /* subtle background */
-    color: white;
+    /* color: white; */
     border-color: rgba(158, 123, 70, 0.8);
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(158, 123, 70, 0.4);
@@ -370,6 +374,7 @@ body {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    color: rgba(158, 123, 70, 0.8);
   }
   
   /* Optional animation */

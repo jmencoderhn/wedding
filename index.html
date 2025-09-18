@@ -62,7 +62,7 @@
     <link rel="shortcut icon" href="https://alessandroscarpellini.it/wedding/assets/favicons/favicon.ico">
 
     <!-- Page Title -->
-    <title>Claudia · Alessandro</title>
+    <title>Stefany · Brando</title>
 
     <!-- Styles -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
@@ -223,9 +223,12 @@
         <p>"Tu presencia es nuestro mejor regalo,<br>pero si deseas hacernos un obsequio te dejamos estas opciones:"</p>
         <ul>
             <li>Lluvia de sobres</li>
+            <li>&nbsp;</li>
             <li>Nuestras Cuentas</li>
-            <li>Cuenta 1</li>
-            <li>Cuenta 2</li>
+            <li>&nbsp;</li>
+            <li>Brando Daniel Reyes Bargas<br>Cuanta ahorro Banpaís: 213000313984</li>
+            <li>&nbsp;</li>
+            <li>Stefany Alejandra Martínez Aguilar<br>Cuenta Bac: 750286791</li>
         </ul>
     </div>
 
@@ -243,7 +246,7 @@
 
     <div id="myModal" class="modal">
       <div class="modal-content">
-        
+        <span class="close">&times;</span>
         <form class="contact-form" action="send_email.php" method="post">
             <!-- <h2>Contact Us</h2> -->
             <input type="text" name="name" placeholder="Nombre" required>
@@ -264,19 +267,19 @@
         
         // Open modal
         openBtn.onclick = function() {
-        modal.style.display = "block";
+            modal.style.display = "block";
         }
         
         // Close modal when clicking the close button
         closeBtn.onclick = function() {
-        modal.style.display = "none";
+            modal.style.display = "none";
         }
         
         // Close modal when clicking outside the modal content
         window.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
         }
     });
 </script>
