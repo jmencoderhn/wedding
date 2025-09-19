@@ -247,16 +247,33 @@
     </figure>
 
     <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <form class="contact-form" action="send_email.php" method="post">
-            <!-- <h2>Contact Us</h2> -->
-            <input type="text" name="name" placeholder="Nombre" required>
-            <input type="email" name="email" placeholder="Correo" required>
-            <textarea name="message" rows="5" placeholder="Escribe Aquí" required></textarea>
-            <button type="submit">Enviar Correo</button>
-        </form>
-      </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="container-form">
+                <!-- Replace with your logo -->
+                <img src="logo.png" alt="Logo" class="logo">
+            
+                <h2>POR FAVOR CONFIRMA TU ASISTENCIA <br> ¡ESPERAMOS QUE ESTÉS ALLÍ!</h2>
+                
+                <div class="divider">❧</div>
+            
+                <form>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="asistencia" value="si"> SI, ALLÍ ESTARÉ
+                    </label>
+                    <label>
+                        <input type="radio" name="asistencia" value="no"> NO PODRÉ ASISTIR
+                    </label>
+                </div>
+            
+                <input type="text" name="nombre" placeholder="NOMBRE">
+                <input type="text" name="cancion" placeholder="¿QUÉ CANCIÓN NO PUEDE FALTAR?">
+            
+                <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 <script>
