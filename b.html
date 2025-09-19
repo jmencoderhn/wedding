@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmación de Asistencia</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fff;
+      color: #8b6b43;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      width: 120px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .divider {
+      font-size: 22px;
+      margin: 20px 0;
+      color: #8b6b43;
+    }
+
+    .radio-group {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .radio-group label {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 2px solid #8b6b43;
+      border-radius: 20px;
+      font-size: 14px;
+      outline: none;
+      text-align: center;
+    }
+
+    button {
+      background: #8b6b43;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #735836;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Replace with your logo -->
+    <img src="logo.png" alt="Logo" class="logo">
+
+    <h2>POR FAVOR CONFIRMA TU ASISTENCIA <br> ¡ESPERAMOS QUE ESTÉS ALLÍ!</h2>
+    
+    <div class="divider">❧</div>
+
+    <form>
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="asistencia" value="si"> SI, ALLÍ ESTARÉ
+        </label>
+        <label>
+          <input type="radio" name="asistencia" value="no"> NO PODRÉ ASISTIR
+        </label>
+      </div>
+
+      <input type="text" name="nombre" placeholder="NOMBRE">
+      <input type="text" name="cancion" placeholder="¿QUÉ CANCIÓN NO PUEDE FALTAR?">
+
+      <button type="submit">ENVIAR</button>
+    </form>
+  </div>
+
+</body>
+</html>
