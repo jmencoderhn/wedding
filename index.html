@@ -164,7 +164,7 @@
 
 <body>
 
-    <section class="opening">
+    <section class="opening animate" data-anim="fade-up">
         <!-- <h1 class="opening-title">
             <span>CLA</span>
             <span>·</span>
@@ -185,11 +185,11 @@
         <figcaption class="date-caption">20 · 06 · 2019</figcaption>
     </figure> -->
 
-    <figure class="illustration-container" style="margin-top: 0px;">
+    <figure class="illustration-container animate" data-anim="fade-up" style="margin-top: 0px;">
         <img class="illustration" src="thumbnail_flor_boda_4.png">
     </figure>
 
-    <div class="text">
+    <div class="text animate" data-anim="fade-in">
         <p class="text-big">¡Nos casamos!</p>
         <p>Cantares 8:6</p>
     </div>
@@ -204,24 +204,24 @@
 
     <div class="illustration-wrapper">
         <div class="illustration-container-img">
-          <a target="_blank" href="https://ul.waze.com/ul?venue_id=178782349.1788020101.5488780&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
+          <a class="animate" data-anim="fade-left" target="_blank" href="https://ul.waze.com/ul?venue_id=178782349.1788020101.5488780&overview=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location">
             <img src="waze.png" alt="Image 1">
           </a>
-          <a target="_blank" href="https://maps.app.goo.gl/8DSoasgq2Jv4SXJK8">
+          <a class="animate" data-anim="fade-right" target="_blank" href="https://maps.app.goo.gl/8DSoasgq2Jv4SXJK8">
             <img src="google1.png" alt="Image 2">
           </a>
         </div>
     </div>
 
-    <div class="text">
+    <div class="text animate" data-anim="fade-in">
         <p class="optional">¡Todo comenzará puntualmente! No llegues tarde para no perderte<br>el momento más importante de nuestras vidas.</p>
     </div>
 
-    <figure class="illustration-container illustration-container-small">
+    <figure class="illustration-container illustration-container-small animate" data-anim="fade-up">
         <img class="illustration" src="thumbnail_flor_boda_4.png">
     </figure>
 
-    <div class="text">
+    <div class="text animate" data-anim="fade-in">
         <p>"Tu presencia es nuestro mejor regalo,<br>pero si deseas hacernos un obsequio te dejamos estas opciones:"</p>
         <ul>
             <li>Lluvia de sobres</li>
@@ -234,11 +234,11 @@
         </ul>
     </div>
 
-    <figure class="illustration-container illustration-container-small">
+    <figure class="illustration-container illustration-container-small animate" data-anim="fade-up">
         <img class="illustration" src="thumbnail_flor_boda_4.png">
     </figure>
 
-    <div class="text">
+    <div class="text animate" data-anim="fade-in">
         <p class="text-big">Confirmar asistencia<br>antes del 31 de agosto.</p>
         <button id="openModal" class="outline-btn">Confirmar</button>
     </div>
@@ -276,6 +276,7 @@
         </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Your code here
@@ -301,5 +302,19 @@
             }
         }
     });
+    function revealOnScroll() {
+        $(".animate").each(function() {
+            var elementTop = $(this).offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
+
+            if (windowBottom > elementTop + 50) {
+            $(this).addClass("visible");
+            }
+        });
+    }
+
+    // Run on scroll + initial load
+    $(window).on("scroll", revealOnScroll);
+    $(document).ready(revealOnScroll);
 </script>
 </html>

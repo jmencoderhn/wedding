@@ -529,3 +529,32 @@ body {
       padding: 12px 30px;
     }
   }
+
+
+
+  
+
+.animate {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+/* Animation presets */
+.animate[data-anim="fade-up"] {
+    transform: translateY(60px);
+}
+.animate[data-anim="fade-left"] {
+    transform: translateX(-60px);
+}
+.animate[data-anim="fade-right"] {
+    transform: translateX(60px);
+}
+.animate[data-anim="zoom-in"] {
+    transform: scale(0.8);
+}
+
+/* Active state (when visible) */
+.animate.visible {
+    opacity: 1;
+    transform: none;
+}
