@@ -475,13 +475,51 @@ body {
     gap: 10px;
   }
 
-  .container-form>form>.radio-group label {
+  .container-form>form>.radio-group>label {
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 5px;
     white-space: nowrap;
     font-size: 12px;
+  }
+  /* Hide default radio */
+  .container-form>form>.radio-group>label>input[type="radio"] {
+    appearance: none; /* modern browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  /* Color when checked */
+  .container-form>form>.radio-group>label>input[type="radio"]:checked {
+    border-color: #b59260;
+    background-color: #b59260;
+  }
+
+  /* Optional: inner dot effect */
+  .container-form>form>.radio-group>label>input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container-form>form>.radio-group>label {
+    margin-right: 15px;
+    cursor: pointer;
   }
 
   .container-form>form>input[type="text"] {

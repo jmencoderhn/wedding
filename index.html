@@ -277,6 +277,8 @@
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.30.1/moment.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         // Your code here
@@ -315,6 +317,38 @@
 
     // Run on scroll + initial load
     $(window).on("scroll", revealOnScroll);
-    $(document).ready(revealOnScroll);
+    // $(document).ready(revealOnScroll);
+
+    $(document).ready(function () {
+        revealOnScroll();
+
+        $("#btn-send-mail").on("click",function(e){
+            emailjs.init({ publicKey: 'SPdis05pmG9_P2O-X' });
+
+            emailjs.send("service_bw0acf6", "template_smq7n7t", {
+                title: "Nuevo Suscriptor",
+                name: $("#name").val(),
+                email: "gerenciageneral@sitacconsultores.com",
+                contact: $("#email").val(),
+                phone: $("#phone").val(),
+                time: moment().format("DD/MM/YYYY hh:mm:ss"),
+                message: $("#comments").val()
+            })
+            .then(function(res) {
+                //alert("Success => " + res);
+                $("#name").val("");
+                $("#email").val("");
+                $("#phone").val("");
+                $("#comments").val("");
+                $(control).removeClass("disabled").removeAttr("disabled").text("Enviar").prepend(`<i class="fa fa-paper-plane me-2"></i>`);
+                $(".wpcf7-response-output").addClass("alert alert-success respuesta-exitosa mt-4").removeClass("wpcf7-response-output").text("Mensaje enviado exitosamente!")
+            })
+            .catch(function(err) {
+                //alert("Err => " + err);
+                $(control).removeClass("disabled").removeAttr("disabled").text("Enviar").prepend(`<i class="fa fa-paper-plane me-2"></i>`);
+                $(".wpcf7-response-output").addClass("alert alert-danger respuesta-exitosa mt-4").removeClass("wpcf7-response-output").text("No hemos conseguido enviar tú mensaje, intenta de nuevo.")
+            });
+        });
+    });
 </script>
 </html>
