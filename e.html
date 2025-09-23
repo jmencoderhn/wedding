@@ -28,7 +28,6 @@
       color:var(--accent);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      text-transform: uppercase;
     }
 
     /* Center container and control width as a tall card */
@@ -416,6 +415,10 @@
     .d-none {
       display: none !important;
     }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
@@ -461,15 +464,15 @@
         <div class="col-12">
           <img src="22.png" class="img-gift"/>
         </div>
-        <hr class="divider-white">
+        <hr class="divider-white" style="margin-top: 10px; margin-bottom: 10px;">
         <div class="col-12">
           <img src="31.png" class="img-name-2"/>
         </div>
-        <hr class="divider-white">
-        <div class="col-12">
-          <div class="col-12"><p class="content-8">Tu presencia es nuestro mejor regalo,</p></div>
-          <div class="col-12"><p class="content-8">pero si deseas hacernos un obsequio te</p></div>
-          <div class="col-12"><p class="content-8">dejamos estas opciones:</p></div>
+        <hr class="divider-white" style="margin-top: 10px; margin-bottom: 10px;">
+        <div class="col-12 uppercase">
+          <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">Tu presencia es nuestro mejor regalo,</p></div>
+          <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">pero si deseas hacernos un obsequio te</p></div>
+          <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">dejamos estas opciones:</p></div>
         </div>
         <div class="col-12">
           <div class="col-12"><p class="content-10">LLUVIA DE SOBRES</p></div>
@@ -478,86 +481,41 @@
         <div class="col-12">
           <div class="col-12"><p class="content-10">NUESTRAS CUENTAS</p></div>
         </div>
-        <div class="col-12"><p class="content-8">Hora:<br>4:00 PM</p></div>
-        <div class="col-12"><p class="content-8">Lugar:<br>LA CUMBRE,EL HATILLO, TEGUCIGALPA</p></div>
-        <div class="col-12"><button type="button" class="btn btn-primary">UBICACIÓN</button></div>
+        <div class="col-12"><p class="content-10" style="padding: 0;margin: 0;">213000313984</p></div>
+        <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">Brando Daniel Reyes Bargas</p></div>
+        <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">CUENTA DE AHORRO BANPAIS</p></div>
+        <div class="col-12"><button type="button" class="btn btn-primary">CLIC PARA COPIAR</button></div>
+        <div class="col-12"><p class="content-10" style="padding: 0;margin-bottom: 0;">750286791</p></div>
+        <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">Stefany Alejandra Martinez Aguilar</p></div>
+        <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">BAC CREDOMATIC</p></div>
+        <div class="col-12"><button type="button" class="btn btn-primary">CLIC PARA COPIAR</button></div>
       </div>
     </section>
 
-    <!-- names + ceremony -->
-    <section class="section d-none">
-
-      <div class="names">STEFANY <span class="amp">&</span> BRANDO</div>
-
-      <div class="divider"></div>
-
-      <div class="event-meta">CEREMONIA Y RECEPCIÓN</div>
-
-      <div class="date-row">
-        <div class="date-box">VIERNES</div>
-        <div class="date-box">21</div>
-        <div class="date-box">2025</div>
+    <section class="section section-leaf-l1">
+      <div class="row">
+        <div class="col-12">
+          <img src="16.png" class="img-name"/>
+        </div>
+        <hr class="divider-white-2">
+        <div class="col-12">
+          <img src="33.png" class="img-logo"/>
+        </div>
+        <hr class="divider-white">
+        <div class="col-12 uppercase">
+          <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">Esperamos que seas parte de esta</p></div>
+          <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">gran celebración, por favor</p></div>
+          <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">confirmamos tu asistencia antes del</p></div>
+          <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">30/09/2025.</p></div>
+        </div>
+        <div class="col-12"><button type="button" class="btn btn-primary">CONFIRMACIÓN</button></div>
+        <br>
+        <div class="col-12">
+          <img src="34.png" class="img-logo"/>
+        </div>
       </div>
-
-      <div class="small-muted" style="margin-top:12px;">
-        Hora: 04:00 PM<br/>
-        Lugar: LA CUMBRE, EL HATILLO, LEGUÍZAMO
-      </div>
-
-      <a class="btn-pill" href="#ubicacion">UBICACIÓN</a>
     </section>
 
-    <!-- regalo section -->
-    <section class="section d-none">
-      <div class="gift-icon" aria-hidden="true">🎁</div>
-      <h2 class="title" style="font-size:20px;margin-bottom:6px;">REGALO</h2>
-
-      <p class="small-muted">
-        Tu presencia es nuestro mejor regalo, pero si deseas hacernos un obsequio, aquí están nuestras cuentas.
-      </p>
-
-      <div class="divider" style="margin-top:18px"></div>
-
-      <div class="small-muted">LLUVIA DE SOBRES</div>
-      <div class="small-muted" style="margin-top:8px;">NUESTRAS CUENTAS</div>
-
-      <!-- bank / copy examples -->
-      <button class="copy-btn" type="button">213000123456 – Banco Ejemplo</button>
-      <button class="copy-btn" type="button">45987654321 – Cuenta Ahorros</button>
-    </section>
-
-    <div style="height:1px;background:rgba(244,245,240,0.12)"></div>
-
-    <!-- dress code / vestimenta -->
-    <section class="section d-none">
-
-      <div style="font-size:16px; font-weight:700; letter-spacing:1px;">VESTIMENTA</div>
-      <div class="small-muted" style="margin-top:8px">FORMAL</div>
-    </section>
-
-    <div style="height:1px;background:rgba(244,245,240,0.12)"></div>
-
-    <!-- confirmation section -->
-    <section class="section d-none">
-      <div class="logo-oval" style="width:88px;height:110px;margin-bottom:10px;">
-        <div class="logo-letters" style="font-size:44px">SB</div>
-      </div>
-
-      <div style="font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:1.3px;">
-        STEFANY & BRANDO — 21.11.2025
-      </div>
-
-      <div class="confirm-title">CONFIRMACIÓN DE ASISTENCIA</div>
-      <p class="small-muted" style="max-width:84%; margin:0 auto 14px;">
-        Por favor confirma si vas a ser parte de esta gran celebración antes del <strong>30/09/2025</strong>.
-      </p>
-
-      <a class="btn-pill" href="#confirmar">CONFIRMACIÓN</a>
-
-      <div style="margin-top:18px; font-weight:700; letter-spacing:2px;">¡TE ESPERAMOS!</div>
-    </section>
-
-    <div style="height:22px;background:transparent"></div>
   </div>
 
   <!-- Optional JS (Bootstrap) -->
