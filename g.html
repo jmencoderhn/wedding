@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Section corner image</title>
+<style>
+    body{
+    background: red;
+    }
+  /* apply to every section */
+  section {
+    position: relative;          /* needed for absolute ::before */
+    padding: 2rem 1rem;          /* content spacing */
+    overflow: visible;           /* allow image overflow if needed */
+    margin: 1.5rem 0;
+    border-radius: 8px;
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;                 /* change size as needed */
+    height: 300px;
+    background-image: url('25.png'); /* your image URL */
+    background-size: contain;    /* or 'cover' */
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translate(-12px, -12px); /* slightly offset outside the section corner */
+    pointer-events: none;        /* lets clicks pass through */
+    z-index: 10;                 /* above section background, below content if you want reduce z-index */
+  }
+
+  /* optional: push section content so image doesn't cover text */
+  .with-offset { padding-left: 4rem; }
+</style>
+</head>
+<body>
+
+<section class="with-offset">
+  <h2>Section 1</h2>
+  <p>Content for section 1 — the image is over the top-left corner.</p>
+</section>
+
+<section class="with-offset">
+  <h2>Section 2</h2>
+  <p>Content for section 2 — repeated automatically.</p>
+</section>
+
+<section>
+  <h2>Section 3 (no offset)</h2>
+  <p>If you don't want to add left padding, remove the <code>with-offset</code> class.</p>
+</section>
+
+</body>
+</html>

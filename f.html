@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Top Left</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: red;
+    }
+
+    .left-image {
+      position: fixed; /* stays even when scrolling */
+      top: 0;
+      left: -35px;
+      width: 300px;  /* adjust size */
+      height: auto;
+      z-index: 1000; /* stays on top of other elements */
+    }
+  </style>
+</head>
+<body>
+  <img src="25.png" class="left-image">
+  
+  <div style="padding:20px;">
+    <h1>Content goes here</h1>
+    <p>Scroll down and the image will stay in the top-left corner.</p>
+    <p style="margin-top:2000px;">End of page.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galviane font — Demo</title>
+
+  <!-- 1) Load Galviane with @font-face (local or hosted) -->
+  <style>
+    /* IMPORTANT: replace the src URL with your hosted font file (woff2 recommended) */
+    @font-face {
+      font-family: "Galviane";
+      src: url("fonts/galviane.woff2") format("woff2"),
+           url("fonts/galviane.woff") format("woff"),
+           url("fonts/galviane.ttf") format("truetype"); /* optional fallback */
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap; /* good UX while font loads */
+    }
+
+    /* optional: italic or other weights (example) */
+    @font-face {
+      font-family: "Galviane";
+      src: url("fonts/galviane-italic.woff2") format("woff2");
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Use the font throughout the page, with sensible fallbacks */
+    :root {
+      --base: 16px;
+    }
+
+    html,body {
+      font-family: "Galviane", "Georgia", serif;
+      font-size: var(--base);
+      line-height: 1.45;
+      margin: 0;
+      padding: 2rem;
+      background: #fafafa;
+      color: #111;
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 0.5rem 0;
+    }
+
+    p.lead {
+      font-size: 1.125rem;
+      margin: 0 0 1.5rem 0;
+      color: #333;
+    }
+
+    .sample {
+      border-left: 4px solid #e2e2e2;
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <h1>Galviane — font demo</h1>
+    <p class="lead">This page demonstrates how to load and use the <strong>Galviane</strong> font with @font-face.</p>
+
+    <section class="sample">
+      <h2>NOS CASAMOS</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Galviane is applied as the primary typeface;
+        if the font fails to load the browser falls back to Georgia, then serif.
+      </p>
+
+      <p style="font-style:italic;">
+        Italic style (if you included the italic file) — check your font files and add @font-face rules for each weight/style.
+      </p>
+    </section>
+
+    <hr />
+
+    <small>
+      Note: Many public font sites list Galviane as "free for personal use" — confirm the license before commercial use.
+    </small>
+  </main>
+</body>
+</html>
