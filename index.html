@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Invitación — Stefany & Brando</title>
 
-  <!-- Bootstrap 4.6 -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/> -->
-
   <!-- Elegant display font -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -73,6 +70,38 @@
       width: 400px;                 /* change size as needed */
       height: 400px;
       background-image: url('25.png'); /* your image URL */
+      background-size: contain;    /* or 'cover' */
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translate(-12px, -12px); /* slightly offset outside the section corner */
+      pointer-events: none;        /* lets clicks pass through */
+      z-index: 10;                 /* above section background, below content if you want reduce z-index */
+    }
+
+    .section-leaf-l2::before {
+      content: "";
+      position: absolute;
+      top: 80px;
+      left: -120px;
+      width: 400px;                 /* change size as needed */
+      height: 400px;
+      background-image: url('25.png'); /* your image URL */
+      background-size: contain;    /* or 'cover' */
+      background-repeat: no-repeat;
+      background-position: center;
+      transform: translate(-12px, -12px); /* slightly offset outside the section corner */
+      pointer-events: none;        /* lets clicks pass through */
+      z-index: 10;                 /* above section background, below content if you want reduce z-index */
+    }
+
+    .section-leaf-r1::after {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -180px;
+      width: 400px;                 /* change size as needed */
+      height: 400px;
+      background-image: url('26.png'); /* your image URL */
       background-size: contain;    /* or 'cover' */
       background-repeat: no-repeat;
       background-position: center;
@@ -330,6 +359,7 @@
         padding-left: 15px;
         padding-right: 15px;
       }
+
       .section-leaf-l1::before {
         content: "";
         position: absolute;
@@ -341,6 +371,54 @@
         background-size: contain;    /* or 'cover' */
         background-repeat: no-repeat;
         background-position: center;
+        transform: translate(-12px, -12px); /* slightly offset outside the section corner */
+        pointer-events: none;        /* lets clicks pass through */
+        z-index: 10;                 /* above section background, below content if you want reduce z-index */
+      }
+      
+      .section-leaf-l2::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: -80px;
+        width: 200px;                 /* change size as needed */
+        height: 100vh;
+        background-image: url('25.png'), url('25.png'); /* your image URL */
+        background-size: contain;    /* or 'cover' */
+        background-repeat: no-repeat;
+        background-position: center, center bottom;
+        transform: translate(-12px, -12px); /* slightly offset outside the section corner */
+        pointer-events: none;        /* lets clicks pass through */
+        z-index: 10;                 /* above section background, below content if you want reduce z-index */
+      }
+
+      .section-leaf-r1::after {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -130px;
+        width: 200px;                 /* change size as needed */
+        height: 200px;
+        background-image: url('26.png'); /* your image URL */
+        background-size: contain;    /* or 'cover' */
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translate(-12px, -12px); /* slightly offset outside the section corner */
+        pointer-events: none;        /* lets clicks pass through */
+        z-index: 10;                 /* above section background, below content if you want reduce z-index */
+      }
+
+      .section-leaf-r2::after {
+        content: "";
+        position: absolute;
+        top: -60px;
+        right: -130px;
+        width: 200px;                 /* change size as needed */
+        height: 100vh;
+        background-image: url('26.png'), url('26.png'); /* your image URL */
+        background-size: contain;    /* or 'cover' */
+        background-repeat: no-repeat;
+        background-position: center 50px, center 400px;
         transform: translate(-12px, -12px); /* slightly offset outside the section corner */
         pointer-events: none;        /* lets clicks pass through */
         z-index: 10;                 /* above section background, below content if you want reduce z-index */
@@ -428,13 +506,186 @@
     .uppercase {
       text-transform: uppercase;
     }
+
+
+
+
+
+
+
+
+    .container-form {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .container-form>.logo {
+    width: 120px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .container-form>h2 {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .container-form>.divider {
+    font-size: 22px;
+    margin: 20px 0;
+    color: #8b6b43;
+  }
+
+  .container-form>form>.radio-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .container-form>form>.radio-group>label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  /* Hide default radio */
+  .container-form>form>.radio-group>label>input[type="radio"] {
+    appearance: none; /* modern browsers */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  /* Color when checked */
+  .container-form>form>.radio-group>label>input[type="radio"]:checked {
+    border-color: #fff;
+    background-color: #fff;
+  }
+
+  /* Optional: inner dot effect */
+  .container-form>form>.radio-group>label>input[type="radio"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: #6a7463;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .container-form>form>.radio-group>label {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  .container-form>form>input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 20px;
+    border: 2px solid #fff;
+    background-color: #9aa78f;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .container-form>form>input[type="text"]::placeholder {
+    color: #fff;   /* desired color */
+    opacity: 0.8;       /* Firefox defaults to lower opacity, so set to 1 if you want exact color */
+  }
+
+  .container-form>form>button {
+    background: #fff;
+    color: #6a7463;
+    border: none;
+    padding: 14px 40px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .container-form>form>button:hover {
+    background: #735836;
+  }
+
+  /* 🔹 Responsive tweaks */
+  @media (max-width: 480px) {
+    .container-form>h2 {
+      font-size: 14px;
+    }
+    .container-form>.logo {
+      width: 90px;
+    }
+    .container-form>form>input[type="text"] {
+      font-size: 13px;
+    }
+    .container-form>form>button {
+      font-size: 14px;
+      padding: 12px 30px;
+    }
+  }
+
+
+
+  
+
+.animate {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+/* Animation presets */
+.animate[data-anim="fade-up"] {
+    transform: translateY(60px);
+}
+.animate[data-anim="fade-left"] {
+    transform: translateX(-60px);
+}
+.animate[data-anim="fade-right"] {
+    transform: translateX(60px);
+}
+.animate[data-anim="zoom-in"] {
+    transform: scale(0.8);
+}
+
+/* Active state (when visible) */
+.animate.visible {
+    opacity: 1;
+    transform: none;
+}
   </style>
 </head>
 <body>
-  <div class="container w-75">
+  <div class="container">
 
     <!-- top section: logo + intro -->
-    <section class="section">
+    <section class="section animate" data-anim="fade-in">
       <div class="row">
         <div class="col-12">
           <img src="18.png" class="img-logo"/>
@@ -447,7 +698,7 @@
       </div>
     </section>
 
-    <section class="section section-leaf-l1">
+    <section class="section section-leaf-l1 section-leaf-r1 animate" data-anim="fade-up">
       <div class="row">
         <div class="col-12">
           <img src="20.png" class="img-name"/>
@@ -466,18 +717,16 @@
       </div>
     </section>
 
-    <br>
-
-    <section class="section">
+    <section class="section animate" data-anim="fade-up">
       <div class="row">
         <div class="col-12">
           <img src="22.png" class="img-gift"/>
         </div>
         <hr class="divider-white" style="margin-top: 10px; margin-bottom: 10px;">
         <div class="col-12">
-          <img src="31.png" class="img-name-2"/>
+          <img src="31.png" class="img-name-2" style="padding-top: 0;"/>
         </div>
-        <hr class="divider-white" style="margin-top: 10px; margin-bottom: 10px;">
+        <hr class="divider-white" style="margin-top: 0; margin-bottom: 10px;">
         <div class="col-12 uppercase">
           <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">Tu presencia es nuestro mejor regalo,</p></div>
           <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">pero si deseas hacernos un obsequio te</p></div>
@@ -490,18 +739,35 @@
         <div class="col-12">
           <div class="col-12"><p class="content-10">NUESTRAS CUENTAS</p></div>
         </div>
-        <div class="col-12"><p class="content-10" style="padding: 0;margin: 0;">213000313984</p></div>
+        <div class="col-12"><p class="content-10" style="padding: 0;margin: 0; text-decoration: none;">213000313984</p></div>
         <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">Brando Daniel Reyes Bargas</p></div>
         <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">CUENTA DE AHORRO BANPAIS</p></div>
         <div class="col-12"><button type="button" class="btn btn-primary">CLIC PARA COPIAR</button></div>
-        <div class="col-12"><p class="content-10" style="padding: 0;margin-bottom: 0;">750286791</p></div>
+        <hr class="divider-white">
+        <div class="col-12"><p class="content-10" style="padding: 0;margin-bottom: 0; text-decoration: none;">750286791</p></div>
         <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">Stefany Alejandra Martinez Aguilar</p></div>
         <div class="col-12"><p class="content-8" style="padding: 0;margin: 0;">BAC CREDOMATIC</p></div>
         <div class="col-12"><button type="button" class="btn btn-primary">CLIC PARA COPIAR</button></div>
       </div>
     </section>
 
-    <section class="section section-leaf-l1">
+    <section class="section section-leaf-l2 section-leaf-r2 animate" data-anim="fade-up">
+      <div class="center-box">
+        <div class="row">
+          <div class="col-12">
+            <img src="23.png" class="img-gift"/>
+          </div>
+          <hr class="divider-white" style="margin-top: 10px; margin-bottom: 10px;">
+          <div class="col-12">
+            <img src="32.png" class="img-name"/>
+          </div>
+          <hr class="divider-white" style="margin-top: 10px; margin-bottom: 10px;">
+          <div class="col-12"><p class="content-10">Formal</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-leaf-l1 section-leaf-r1 animate" data-anim="fade-up">
       <div class="row">
         <div class="col-12">
           <img src="16.png" class="img-name"/>
@@ -525,11 +791,81 @@
       </div>
     </section>
 
+    <section class="section d-none">
+      <div class="row">
+        <div class="col-12">
+          <img src="17.png" class="img-logo"/>
+        </div>
+        <div class="col-12">
+            
+          <div class="container-form">
+        
+            <h2>POR FAVOR CONFIRMA TU ASISTENCIA <br> ¡ESPERAMOS QUE ESTÉS ALLÍ!</h2>
+        
+            <form>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="asistencia" value="si"> SI, ALLÍ ESTARÉ
+                </label>
+                <label>
+                    <input type="radio" name="asistencia" value="no"> NO PODRÉ ASISTIR
+                </label>
+            </div>
+        
+            <input type="text" name="nombre" placeholder="NOMBRE">
+            <input type="text" name="cancion" placeholder="¿QUÉ CANCIÓN NO PUEDE FALTAR?">
+        
+            <button id="btn-send-mail">ENVIAR</button>
+            </form>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- Optional JS (Bootstrap) -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function revealOnScroll() {
+        $(".animate").each(function() {
+            var elementTop = $(this).offset().top;
+            var windowBottom = $(window).scrollTop() + $(window).height();
 
+            if (windowBottom > elementTop + 50) {
+                $(this).addClass("visible");
+            }
+        });
+    }
+
+    // Run on scroll + initial load
+    $(window).on("scroll", revealOnScroll);
+    // $(document).ready(revealOnScroll);
+
+    $(document).ready(function () {
+        revealOnScroll();
+
+        $("#btn-send-mail").on("click",function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            
+            emailjs.init({ publicKey: 'SPdis05pmG9_P2O-X' });
+
+            emailjs.send("service_bw0acf6", "template_smq7n7t", {
+                title: `${$("input[name=nombre]").val()} - Confirmando Asistencia`,
+                confirm: $("input[name=asistencia]").val(),
+                name: $("input[name=nombre]").val(),
+                song: $("input[name=cancion]").val()
+            })
+            .then(function(res) {
+                alert("Enviado");
+            })
+            .catch(function(err) {
+                alert("Error al enviar correo");
+            });
+        });
+    });
+  </script>
 </body>
 </html>
