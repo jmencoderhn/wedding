@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Right Corner Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 200vh; /* just to show scrolling */
+    }
+
+    .corner-box {
+      position: fixed;   /* stays in the corner even when scrolling */
+      top: 10px;
+      right: 10px;
+      background: #333;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="corner-box">
+    ⏰ Top Right Corner
+  </div>
+
+  <h1 style="padding:20px;">Scroll down to see the box stay in place</h1>
+  <p style="padding:20px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec risus et lorem egestas finibus. Suspendisse potenti. Etiam ac nisi vitae lorem eleifend dictum.</p>
+</body>
+</html>
